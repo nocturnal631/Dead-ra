@@ -119,7 +119,7 @@ end
 redeemButton.MouseButton1Click:Connect(function()
     if textBox.Text == "" then
         sendNotification("Error", "Textbox is empty!")
-    elseif textBox.Text == "Novaisbest" then
+    elseif textBox.Text == "111" then
         sendNotification("Success", "Script Loaded!")
         loadstring(game:HttpGet("https://raw.githubusercontent.com/SpiderScriptRB/Dead-Rails-SpiderXHub-Script/refs/heads/main/SpiderXHub%202.0.txt"))()
         hideGUI() -- Close GUI smoothly
