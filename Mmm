@@ -4,6 +4,12 @@ local TweenService = game:GetService("TweenService")
 
 local player = Players.LocalPlayer
 
+-- List of valid keys
+local validKeys = {
+    ["111"] = "https://raw.githubusercontent.com/SpiderScriptRB/Dead-Rails-SpiderXHub-Script/refs/heads/main/SpiderXHub%202.0.txt",
+    ["Novaisbest"] = "https://raw.githubusercontent.com/SpiderScriptRB/Dead-Rails-SpiderXHub-Script/refs/heads/main/SpiderXHub%202.0.txt"
+}
+
 -- Create ScreenGui
 local screenGui = Instance.new("ScreenGui")
 screenGui.Parent = player:WaitForChild("PlayerGui")
@@ -117,11 +123,13 @@ end
 
 -- Redeem Button Click Event
 redeemButton.MouseButton1Click:Connect(function()
-    if textBox.Text == "" then
+    local enteredKey = textBox.Text
+
+    if enteredKey == "" then
         sendNotification("Error", "Textbox is empty!")
-    elseif textBox.Text == "111" then
+    elseif validKeys[enteredKey] then
         sendNotification("Success", "Script Loaded!")
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpiderScriptRB/Dead-Rails-SpiderXHub-Script/refs/heads/main/SpiderXHub%202.0.txt"))()
+        loadstring(game:HttpGet(validKeys[enteredKey]))()
         hideGUI() -- Close GUI smoothly
     else
         sendNotification("Error", "Invalid Key!")
