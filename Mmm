@@ -6,8 +6,8 @@ local player = Players.LocalPlayer
 
 -- List of valid keys
 local validKeys = {
-    ["111"] = "https://raw.githubusercontent.com/SpiderScriptRB/Dead-Rails-SpiderXHub-Script/refs/heads/main/SpiderXHub%202.0.txt",
-    ["Novaisbest"] = "https://raw.githubusercontent.com/SpiderScriptRB/Dead-Rails-SpiderXHub-Script/refs/heads/main/SpiderXHub%202.0.txt"
+    ["111"] = "https://raw.githubusercontent.com/deprivationist/Sypher-Hub/refs/heads/main/Dead%20Rails%20Sypher%20Hub.txt",
+    ["Novaisbest"] = "https://raw.githubusercontent.com/deprivationist/Sypher-Hub/refs/heads/main/Dead%20Rails%20Sypher%20Hub.txt"
 }
 
 -- Create ScreenGui
@@ -28,11 +28,11 @@ local uiCorner = Instance.new("UICorner")
 uiCorner.CornerRadius = UDim.new(0, 10)
 uiCorner.Parent = frame
 
--- Create Title Label (SpiderXHub)
+-- Create Title Label (Sypher Hub)
 local titleLabel = Instance.new("TextLabel")
 titleLabel.Size = UDim2.new(1, 0, 0, 40)
 titleLabel.Position = UDim2.new(0, 0, 0, 5)
-titleLabel.Text = "SpiderXHub"
+titleLabel.Text = "Sypher Hub"
 titleLabel.TextScaled = true
 titleLabel.Font = Enum.Font.GothamBold
 titleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -129,7 +129,7 @@ redeemButton.MouseButton1Click:Connect(function()
         sendNotification("Error", "Textbox is empty!")
     elseif validKeys[enteredKey] then
         sendNotification("Success", "Script Loaded!")
-        loadstring(game:HttpGet(validKeys[enteredKey]))()
+        loadstring(game:HttpGet(validKeys[enteredKey], true))()
         hideGUI() -- Close GUI smoothly
     else
         sendNotification("Error", "Invalid Key!")
