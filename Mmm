@@ -6,8 +6,8 @@ local player = Players.LocalPlayer
 
 -- List of valid keys
 local validKeys = {
-    ["111"] = "https://raw.githubusercontent.com/deprivationist/Sypher-Hub/refs/heads/main/Dead%20Rails%20Sypher%20Hub.txt",
-    ["Novaisbest"] = "https://raw.githubusercontent.com/deprivationist/Sypher-Hub/refs/heads/main/Dead%20Rails%20Sypher%20Hub.txt"
+    ["111"] = "https://raw.githubusercontent.com/nocturnal631/Dead-roil-soul-hub/refs/heads/main/Drad",
+    ["Novaisbest"] = "https://raw.githubusercontent.com/nocturnal631/Dead-roil-soul-hub/refs/heads/main/Drad"
 }
 
 -- Create ScreenGui
