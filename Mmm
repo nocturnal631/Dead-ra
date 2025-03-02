@@ -139,7 +139,7 @@ end)
 -- Get Key Button Click Event
 getKeyButton.MouseButton1Click:Connect(function()
     if setclipboard then
-        setclipboard("https://discord.gg/Ced3QR9m")
+        setclipboard("https://discord.gg/5C7r8XHZ3r")
         sendNotification("Copied!", "Key copied to clipboard!")
     else
         sendNotification("Error", "Clipboard not supported!")
